@@ -19,7 +19,7 @@ This project is a Spring Boot application that can run in two ways:
 ## Running the App with Docker 
 
 1. Build the project using Maven (this creates the jar file).
-2. Make sure a `.env` file exists (copied from `.env.example`).
+2. Make sure a .env file exists (copied from .env.example).
 3. Start Docker using docker compose.
 4. Open Swagger in your browser:  
    http://localhost:8080/swagger-ui/index.html
