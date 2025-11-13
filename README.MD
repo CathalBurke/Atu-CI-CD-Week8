@@ -39,4 +39,4 @@ This project is a Spring Boot application that can run in two ways:
 - application-dev.properties
 - application-docker.properties
 
-`.env` is not included 
+.env is not included 
