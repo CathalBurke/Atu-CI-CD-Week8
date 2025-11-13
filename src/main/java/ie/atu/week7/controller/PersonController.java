@@ -42,5 +42,11 @@ public class PersonController {
         person.setId(null); // ignore id from client
         return service.update(employeeId, person);
     }
+    // DELETE a person by employeeId
+    @DeleteMapping("/{employeeId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable String employeeId) {
+        service.delete(employeeId);
+    }
 
 }
