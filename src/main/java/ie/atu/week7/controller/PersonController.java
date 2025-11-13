@@ -36,4 +36,11 @@ public class PersonController {
     public Person getByEmployeeId(@PathVariable String employeeId) {
         return service.findByEmployeeId(employeeId);
     }
+    // UPDATE
+    @PutMapping("/{employeeId}")
+    public Person update(@PathVariable String employeeId, @RequestBody Person person) {
+        person.setId(null); // ignore id from client
+        return service.update(employeeId, person);
+    }
+
 }

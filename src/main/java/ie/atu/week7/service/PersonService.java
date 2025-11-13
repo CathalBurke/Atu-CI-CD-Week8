@@ -27,4 +27,17 @@ public class PersonService {
         return repo.findByEmployeeId(id)
                 .orElseThrow(() -> new IllegalArgumentException("Person not found"));
     }
+    public Person update(String employeeId, Person updated) {
+        // reuse existing method to throw if not found
+        Person existing = findByEmployeeId(employeeId);
+
+        existing.setName(updated.getName());
+        existing.setEmail(updated.getEmail());
+        existing.setPosition(updated.getPosition());
+        existing.setDepartment(updated.getDepartment());
+        existing.setEmployeeId(updated.getEmployeeId());
+
+        return repo.save(existing);
+    }
+
 }
