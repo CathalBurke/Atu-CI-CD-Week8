@@ -39,5 +39,10 @@ public class PersonService {
 
         return repo.save(existing);
     }
+    public void delete(String employeeId) {
+        // reuse existing method so it throws if not found
+        Person existing = findByEmployeeId(employeeId);
+        repo.delete(existing);
+    }
 
 }
